@@ -29,4 +29,4 @@ app.use(
 
 app.use(require("./routes"));
 
-server.listen(progress.event.POST || 3333);
+server.listen(progress.env.POST || 3333);
