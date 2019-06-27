@@ -8,8 +8,8 @@ const LikeController = require("./controllers/LikeController");
 const routes = new express.Router();
 const upload = multer(uploadConfig);
 
-routes.get("/", () => {
-  return "Ponto de inicio";
+routes.get("/", (req, res) => {
+  return res.send("Ponto de inicio");
 });
 routes.get("/posts", PostController.index);
 routes.post("/posts", upload.single("image"), PostController.store);
