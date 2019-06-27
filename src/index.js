@@ -29,4 +29,8 @@ app.use(
 
 app.use(require("./routes"));
 
-server.listen(process.env.POST || 3333);
+var port = process.env.PORT || 3333;
+
+server.listen(port, "0.0.0.0", function() {
+  console.log("Listeng on Port 3333");
+});
